@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Run tests
-        run: mkdir go/src && GOPATH=go sh bin/build.sh
+        run: mkdir -p go/src && GOPATH=go sh bin/build.sh
