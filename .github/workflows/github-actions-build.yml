@@ -6,12 +6,7 @@ jobs:
   releases-matrix:
     name: Release Go Binary
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        # build and publish in parallel: linux/amd64
-        goos: [linux]
-        goarch: [amd64]
     steps:
-      - uses: leonlee/nacos-coredns-plugin@master
+      - uses: actions/checkout@master
       - name: Run tests
         run: sh bin/build.sh
