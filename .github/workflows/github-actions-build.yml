@@ -1,7 +1,19 @@
-name: GitHub Actions Build
-on: [push]
+name: Release binaries
+
+on:
+  release:
+    types: [created]
+
 jobs:
-  Explore-GitHub-Actions:
+  releases-matrix:
+    name: Release Go Binary
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # build and publish in parallel: linux/amd64
+        goos: [linux]
+        goarch: [amd64]
     steps:
-      - run: sh bin/build.sh
+      - uses: leonlee/nacos-coredns-plugin@master
+      - name: Run tests
+        run: sh bin/build.sh
