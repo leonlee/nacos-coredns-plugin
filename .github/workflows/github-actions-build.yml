@@ -1,8 +1,6 @@
 name: Release binaries
 
-on:
-  release:
-    types: [created]
+on: [push]
 
 jobs:
   releases-matrix:
