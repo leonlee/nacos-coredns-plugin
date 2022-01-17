@@ -3,6 +3,8 @@ This project provides a **DNS-F** client based on [CoreDNS](https://coredns.io/)
 ## Quic Start
 To build and run nacos coredns plugin, the OS must be Linux or Mac. And also, golang environments(GOPATH,GOROOT,GOHOME) must be configured correctly.
 
+
+
 ### Build
 ```
 git clone https://github.com/nacos-group/nacos-coredns-plugin.git 
