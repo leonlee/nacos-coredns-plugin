@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # cd GOPATH
+PWD=$(pwd)
+GOPATH=$PWD/ws
+mkdir -p $GOPATH/src
 cd $GOPATH/src/
 
 # remove codes
